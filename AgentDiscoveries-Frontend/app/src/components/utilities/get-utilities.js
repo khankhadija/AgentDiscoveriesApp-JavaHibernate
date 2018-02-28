@@ -28,14 +28,15 @@ export function getEntity (api, id) {
     });
 }
 
-function filterResults (results) {
+export function filterResults (results) {
   results.forEach(val => {
     delete val.hashedPassword; // we don't want this to be rendered
   });
 
   return results;
 }
-function filterResult (result) {
+
+export function filterResult (result) {
   delete result.hashedPassword; // we don't want this to be rendered
   return result;
 }
