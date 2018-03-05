@@ -31,9 +31,8 @@ public class DailyMessageIT {
     public static void setUp(){
         ChromeOptions options = new ChromeOptions()
                 .addArguments("headless")
-                .addArguments("disable-gpu")
                 .addArguments("no-sandbox")
-                .setBinary("/usr/bin/");
+                .addArguments("window-size=1024,768");
         driver = new ChromeDriver(options);
         helper= new E2eHelper();
         driver.manage().timeouts()

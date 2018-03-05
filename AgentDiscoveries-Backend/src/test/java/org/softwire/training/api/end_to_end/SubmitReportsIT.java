@@ -28,11 +28,7 @@ public class SubmitReportsIT {
     public static void setUp() throws InterruptedException {
         ChromeOptions options = new ChromeOptions()
                 .addArguments("headless")
-                .addArguments("disable-gpu")
-                .addArguments("start-maximised")
-                .addArguments("remote-debugging-port=9222")
-                .addArguments("dump-dom")
-                .setBinary("/usr/bin/");
+                .addArguments("no-sandbox");
         driver = new ChromeDriver(options);
         helper = new E2eHelper();
         driver.manage().timeouts()
