@@ -27,7 +27,6 @@ public class LoginIT {
         ChromeOptions options = new ChromeOptions()
                 .addArguments("headless")
                 .addArguments("disable-gpu")
-                .addArguments("start-maximised")
                 .addArguments("no-sandbox")
                 .addArguments("window-size=1280,1024")
                 .setBinary("/usr/bin/");

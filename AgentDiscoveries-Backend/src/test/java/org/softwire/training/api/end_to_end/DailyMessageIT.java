@@ -30,6 +30,9 @@ public class DailyMessageIT {
     @BeforeAll
     public static void setUp(){
         ChromeOptions options = new ChromeOptions()
+                .addArguments("headless")
+                .addArguments("disable-gpu")
+                .addArguments("no-sandbox")
                 .setBinary("/usr/bin/");
         driver = new ChromeDriver(options);
         helper= new E2eHelper();
