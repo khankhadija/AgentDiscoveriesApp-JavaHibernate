@@ -26,7 +26,11 @@ public class SubmitReportsIT {
 
     @BeforeAll
     public static void setUp() throws InterruptedException {
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions()
+                .addArguments("headless")
+                .addArguments("start-maximised")
+                .setBinary("/usr/bin/google-chrome");
+        driver = new ChromeDriver(options);
         helper = new E2eHelper();
         driver.manage().timeouts()
                 .implicitlyWait(10, TimeUnit.SECONDS)
