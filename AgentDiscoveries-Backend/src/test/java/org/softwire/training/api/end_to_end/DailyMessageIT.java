@@ -29,7 +29,7 @@ public class DailyMessageIT {
     @BeforeAll
     public static void setUp(){
         driver=helper.prepareDriver();
-        wait = new WebDriverWait(driver, 10);
+        wait = new WebDriverWait(driver, 15);
     }
 
     @AfterAll
