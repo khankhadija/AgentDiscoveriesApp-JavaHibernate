@@ -28,6 +28,7 @@ public class LoginIT {
                 .addArguments("headless")
                 .addArguments("disable-gpu")
                 .addArguments("start-maximised")
+                .addArguments("no-sandbox")
                 .setBinary("/usr/bin/");
         //^This line should be specified at command line to not occur locally.
         driver = new ChromeDriver(options);
