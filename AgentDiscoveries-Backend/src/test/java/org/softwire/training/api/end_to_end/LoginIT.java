@@ -27,8 +27,7 @@ public class LoginIT {
         ChromeOptions options = new ChromeOptions()
                 .addArguments("headless")
                 .addArguments("no-sandbox")
-                .addArguments("window-size=1024,768")
-                .setBinary("/usr/bin/");
+                .addArguments("window-size=1024,768");
         //^This line should be specified at command line to not occur locally.
         driver = new ChromeDriver(options);
         helper = new E2eHelper();
