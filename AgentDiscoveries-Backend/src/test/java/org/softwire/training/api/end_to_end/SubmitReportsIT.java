@@ -28,6 +28,7 @@ public class SubmitReportsIT {
     public static void setUp() throws InterruptedException {
         ChromeOptions options = new ChromeOptions()
                 .addArguments("headless")
+                .addArguments("disable-gpu")
                 .setBinary("/usr/bin/");
         driver = new ChromeDriver(options);
         helper = new E2eHelper();

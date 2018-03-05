@@ -26,6 +26,7 @@ public class LoginIT {
     public static void setUp() {
         ChromeOptions options = new ChromeOptions()
                 .addArguments("headless")
+                .addArguments("disable-gpu")
                 .addArguments("start-maximised")
                 .setBinary("/usr/bin/");
         //^This line should be specified at command line to not occur locally.
