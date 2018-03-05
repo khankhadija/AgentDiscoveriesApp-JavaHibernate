@@ -15,6 +15,7 @@ import org.softwire.training.api.core.MessageProcessor;
 import org.softwire.training.api.end_to_end.helper.E2eHelper;
 import org.softwire.training.models.Message;
 
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -28,6 +29,10 @@ public class DailyMessageIT {
 
     @BeforeAll
     public static void setUp(){
+        Map<String, String> env = System.getenv();
+        for (String envName : env.keySet()) {
+            System.out.format("%s=%s%n", envName, env.get(envName));
+        }
         ChromeOptions options = new ChromeOptions()
                 .addArguments("headless");
         driver = new ChromeDriver(options);
