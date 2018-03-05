@@ -29,6 +29,7 @@ public class LoginIT {
                 .addArguments("disable-gpu")
                 .addArguments("start-maximised")
                 .addArguments("no-sandbox")
+                .addArguments("window-size=1280,1024")
                 .setBinary("/usr/bin/");
         //^This line should be specified at command line to not occur locally.
         driver = new ChromeDriver(options);
