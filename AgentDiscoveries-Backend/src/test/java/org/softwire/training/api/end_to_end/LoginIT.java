@@ -24,11 +24,11 @@ public class LoginIT {
 
     @BeforeAll
     public static void setUp() {
-        System.out.println("Trying a second route");
         ChromeOptions options = new ChromeOptions()
                 .addArguments("headless")
                 .addArguments("start-maximised")
-                .setBinary("/usr/bin/");;
+                .setBinary("/usr/bin/");
+        //^This line should be specified at command line to not occur locally.
         driver = new ChromeDriver(options);
         helper = new E2eHelper();
         driver.manage().timeouts()

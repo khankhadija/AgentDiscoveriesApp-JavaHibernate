@@ -30,8 +30,7 @@ public class DailyMessageIT {
     @BeforeAll
     public static void setUp(){
         ChromeOptions options = new ChromeOptions()
-                .addArguments("headless")
-                .setBinary("/usr/bin");
+                .setBinary("/usr/bin/");
         driver = new ChromeDriver(options);
         helper= new E2eHelper();
         driver.manage().timeouts()

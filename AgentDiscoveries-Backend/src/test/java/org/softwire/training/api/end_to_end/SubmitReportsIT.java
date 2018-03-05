@@ -26,11 +26,9 @@ public class SubmitReportsIT {
 
     @BeforeAll
     public static void setUp() throws InterruptedException {
-        System.out.println("Attempting to set binary precisely");
         ChromeOptions options = new ChromeOptions()
                 .addArguments("headless")
-                .addArguments("start-maximised")
-                .setBinary("~/google-chrome");
+                .setBinary("/usr/bin/");
         driver = new ChromeDriver(options);
         helper = new E2eHelper();
         driver.manage().timeouts()
