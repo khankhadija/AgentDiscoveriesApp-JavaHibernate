@@ -24,12 +24,11 @@ public class LoginIT {
 
     @BeforeAll
     public static void setUp() {
-        System.out.println(System.getProperty("java.class.path"));
         System.out.println("Trying a second route");
         ChromeOptions options = new ChromeOptions()
                 .addArguments("headless")
                 .addArguments("start-maximised")
-                .setBinary("/opt/google/chrome/google-chrome");;
+                .setBinary("/usr/bin/");;
         driver = new ChromeDriver(options);
         helper = new E2eHelper();
         driver.manage().timeouts()

@@ -30,7 +30,7 @@ public class SubmitReportsIT {
         ChromeOptions options = new ChromeOptions()
                 .addArguments("headless")
                 .addArguments("start-maximised")
-                .setBinary("/usr/bin/google-chrome");
+                .setBinary("~/google-chrome");
         driver = new ChromeDriver(options);
         helper = new E2eHelper();
         driver.manage().timeouts()
