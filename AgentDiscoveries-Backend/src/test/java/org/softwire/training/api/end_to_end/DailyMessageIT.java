@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.softwire.training.api.core.MessageProcessor;
@@ -27,7 +28,9 @@ public class DailyMessageIT {
 
     @BeforeAll
     public static void setUp(){
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions()
+                .addArguments("headless");
+        driver = new ChromeDriver(options);
         helper= new E2eHelper();
         driver.manage().timeouts()
                 .implicitlyWait(10, TimeUnit.SECONDS)
