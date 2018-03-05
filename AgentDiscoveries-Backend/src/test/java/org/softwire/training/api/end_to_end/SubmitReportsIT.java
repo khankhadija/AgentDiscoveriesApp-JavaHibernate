@@ -26,6 +26,7 @@ public class SubmitReportsIT {
 
     @BeforeAll
     public static void setUp() throws InterruptedException {
+        System.out.println("Attempting to set binary precisely");
         ChromeOptions options = new ChromeOptions()
                 .addArguments("headless")
                 .addArguments("start-maximised")
