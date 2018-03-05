@@ -29,6 +29,7 @@ public class SubmitReportsIT {
         ChromeOptions options = new ChromeOptions()
                 .addArguments("headless")
                 .addArguments("disable-gpu")
+                .addArguments("dump-dom")
                 .setBinary("/usr/bin/");
         driver = new ChromeDriver(options);
         helper = new E2eHelper();
