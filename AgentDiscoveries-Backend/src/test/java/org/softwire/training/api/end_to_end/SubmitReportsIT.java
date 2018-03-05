@@ -86,5 +86,6 @@ public class SubmitReportsIT {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("alert-info")));
         WebElement alert = driver.findElement(By.className("alert-info"));
         assertTrue(alert.getText().contains("Report sent"));
+        System.out.println("VERIFYING THAT THE TEST FINISHED!!!!!");
     }
 }
