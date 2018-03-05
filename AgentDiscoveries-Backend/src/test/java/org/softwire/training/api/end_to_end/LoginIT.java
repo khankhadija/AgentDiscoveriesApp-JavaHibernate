@@ -26,9 +26,8 @@ public class LoginIT {
     public static void setUp() {
         ChromeOptions options = new ChromeOptions()
                 .addArguments("headless")
-                .addArguments("disable-gpu")
                 .addArguments("no-sandbox")
-                .addArguments("window-size=1280,1024")
+                .addArguments("window-size=1024,768")
                 .setBinary("/usr/bin/");
         //^This line should be specified at command line to not occur locally.
         driver = new ChromeDriver(options);
