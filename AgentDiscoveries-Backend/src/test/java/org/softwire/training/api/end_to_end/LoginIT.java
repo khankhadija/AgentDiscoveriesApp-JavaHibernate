@@ -24,6 +24,7 @@ public class LoginIT {
 
     @BeforeAll
     public static void setUp() {
+        System.out.println(System.getProperty("java.class.path"));
         System.out.println("Trying a second route");
         ChromeOptions options = new ChromeOptions()
                 .addArguments("headless")
