@@ -55,6 +55,7 @@ public class DailyMessageIT {
                 throw e;
             }
         }
+        System.out.println(driver.getPageSource());
         WebElement userNameInput = driver.findElement(By.id("message-input"));
         userNameInput.sendKeys(startingMessage);
 
