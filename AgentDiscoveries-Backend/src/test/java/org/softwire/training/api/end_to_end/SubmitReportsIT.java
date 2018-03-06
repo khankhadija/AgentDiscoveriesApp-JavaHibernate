@@ -27,7 +27,7 @@ public class SubmitReportsIT {
     @BeforeAll
     public static void setUp() throws InterruptedException {
         driver=helper.prepareDriver();
-        wait = new WebDriverWait(driver, 15);
+        wait = new WebDriverWait(driver, 20);
     }
 
     @AfterAll

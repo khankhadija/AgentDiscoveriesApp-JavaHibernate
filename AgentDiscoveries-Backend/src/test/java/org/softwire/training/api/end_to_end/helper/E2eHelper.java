@@ -30,8 +30,8 @@ public class E2eHelper {
                 .addArguments("no-sandbox");
         WebDriver driver = new ChromeDriver(options);
         driver.manage().timeouts()
-                .implicitlyWait(45, TimeUnit.SECONDS)
-                .pageLoadTimeout(3, TimeUnit.SECONDS);
+                .implicitlyWait(60, TimeUnit.SECONDS)
+                .pageLoadTimeout(10, TimeUnit.SECONDS);
         return driver;
     }
 }
