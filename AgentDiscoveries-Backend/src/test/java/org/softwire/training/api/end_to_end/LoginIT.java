@@ -45,5 +45,6 @@ public class LoginIT {
         helper.login(driver, Target_Address);
         WebElement navBarRight = driver.findElement(By.className("navbar-right"));
         assertTrue(navBarRight.getText().contains("Log Out"));
+        System.out.println("Logged in");
     }
 }

@@ -38,14 +38,17 @@ public class SubmitReportsIT {
     @Test
     public void testCanSubmitLocationReport() {
         helper.login(driver, Target_Address);
+        System.out.println("Looking for location submit page");
         try {
             driver.get(Target_Address + "/#/submit/location");
         } catch (Exception e) {
+            System.out.println(e);
             if (e.getClass() != TimeoutException.class) {
                 throw e;
             }
         }
 
+        System.out.println("Loaded page?");
         WebElement statusInput = driver.findElement(By.id("status-input"));
         statusInput.sendKeys("1");
         WebElement reportInput = driver.findElement(By.id("report-input"));

@@ -48,14 +48,16 @@ public class DailyMessageIT {
         messageProcessor.decrypt(decodedMessage);
 
         helper.login(driver, Target_Address);
+        System.out.println("Looking for /message page");
         try {
             driver.get(Target_Address + "/#/message");
         }catch(Exception e){
+            System.out.println(e);
             if(e.getClass()!=TimeoutException.class){
                 throw e;
             }
         }
-        System.out.println(driver.getPageSource());
+        System.out.println("Looking for message input");
         WebElement userNameInput = driver.findElement(By.id("message-input"));
         userNameInput.sendKeys(startingMessage);
 

@@ -22,6 +22,7 @@ public class E2eHelper {
         WebElement navBarRight = driver.findElement(By.className("navbar-right"));
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.stalenessOf(submitButton));
+        System.out.println("Finished logging in");
     }
 
     public WebDriver prepareDriver() {
