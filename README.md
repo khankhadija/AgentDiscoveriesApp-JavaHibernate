@@ -33,7 +33,7 @@ The jar generated in the backend project will contain everything required for th
 
 To start the application from the command line, run
 
-`java -jar AgentDiscoveries-Backend/target/agentdiscoveries-backend-1.0-SNAPSHOT.jar`.
+`java -jar AgentDiscoveries-Backend/target/agentdiscoveries-backend-1.0-SNAPSHOT.jar`
 
 ## Checking the application has started
 
@@ -57,9 +57,9 @@ These should be deleted in the production environment.
 
 ## IntelliJ Configuration
 
-You can run `AgentDiscoveriesApplication` directly, but the frontend project must also have been built for it to serve the website.
+You can run `AgentDiscoveriesApplication` directly inside IntelliJ, but the frontend project must also have been built or else it can't serve the website.
 
-You can do this automatically by adding a 'build step' to the run configuration which builds the frontend:
+You can ensure this is automatically done by adding a 'build step' to the run configuration:
 Either `mvn build` or `npm run build` in the frontend project.
 
 Alternatively, you can serve the frontend using a development server:
