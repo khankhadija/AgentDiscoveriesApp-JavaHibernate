@@ -1,6 +1,7 @@
-package org.softwire.training.api.core;
+package org.softwire.training.api.unit.core;
 
 import org.junit.jupiter.api.Test;
+import org.softwire.training.api.core.ExecutiveSummaryBuilder;
 import org.softwire.training.models.Agent;
 import org.softwire.training.models.Location;
 import org.softwire.training.models.LocationStatusReport;

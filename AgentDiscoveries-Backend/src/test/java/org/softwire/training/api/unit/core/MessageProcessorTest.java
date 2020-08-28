@@ -1,6 +1,7 @@
-package org.softwire.training.api.core;
+package org.softwire.training.api.unit.core;
 
 import org.junit.jupiter.api.Test;
+import org.softwire.training.api.core.MessageProcessor;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;

@@ -1,8 +1,9 @@
-package org.softwire.training.api.core;
+package org.softwire.training.api.unit.core;
 
 import org.apache.commons.configuration2.Configuration;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.softwire.training.api.core.TokenIssuer;
 import org.softwire.training.api.models.ErrorCode;
 import org.softwire.training.api.models.FailedRequestException;
 

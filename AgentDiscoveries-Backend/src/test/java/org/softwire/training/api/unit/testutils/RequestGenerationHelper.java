@@ -1,4 +1,4 @@
-package org.softwire.training.api.testutils;
+package org.softwire.training.api.unit.testutils;
 
 import com.google.gson.Gson;
 import org.softwire.training.api.core.CustomisedGsonBuilder;

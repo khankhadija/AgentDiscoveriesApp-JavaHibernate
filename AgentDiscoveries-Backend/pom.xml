@@ -38,8 +38,8 @@
                 <skip.unit.tests>true</skip.unit.tests>
                 <skip.integration.tests>false</skip.integration.tests>
                 <skip.starting.app.before.tests>false</skip.starting.app.before.tests>
-                <target.address>http://localhost:8089</target.address>
-                <server.port>8089</server.port>
+                <target.address>http://localhost:8080</target.address>
+                <server.port>8080</server.port>
                 <database.url>jdbc:mysql://localhost:3306/agentdiscoveries?useSSL=false</database.url>
             </properties>
         </profile>
@@ -52,8 +52,8 @@
                 <skip.unit.tests>false</skip.unit.tests>
                 <skip.integration.tests>false</skip.integration.tests>
                 <skip.starting.app.before.tests>false</skip.starting.app.before.tests>
-                <target.address>http://localhost:8089</target.address>
-                <server.port>8089</server.port>
+                <target.address>http://localhost:8080</target.address>
+                <server.port>8080</server.port>
                 <database.url>jdbc:mysql://localhost:3306/agentdiscoveries?useSSL=false</database.url>
             </properties>
         </profile>

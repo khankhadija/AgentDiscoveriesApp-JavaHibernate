@@ -1,4 +1,4 @@
-package org.softwire.training.api.routes.v1;
+package org.softwire.training.api.unit.routes.v1;
 
 import org.junit.jupiter.api.Test;
 import org.softwire.training.api.core.PasswordHasher;
@@ -7,7 +7,8 @@ import org.softwire.training.api.models.ErrorCode;
 import org.softwire.training.api.models.FailedRequestException;
 import org.softwire.training.api.models.TokenRequestApiModel;
 import org.softwire.training.api.models.TokenResponseApiModel;
-import org.softwire.training.api.testutils.RequestGenerationHelper;
+import org.softwire.training.api.routes.v1.TokenRoutes;
+import org.softwire.training.api.unit.testutils.RequestGenerationHelper;
 import org.softwire.training.db.daos.UsersDao;
 import org.softwire.training.models.User;
 import spark.Request;
@@ -18,9 +19,7 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 public class TokenRoutesTest {
 

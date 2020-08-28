@@ -162,9 +162,9 @@
       <id>integration-test-local</id>
       <properties>
         <skip.integration.tests>false</skip.integration.tests>
-        <server.port>8089</server.port>
+        <server.port>8080</server.port>
         <database.url>jdbc:mysql://localhost:3306/agentdiscoveries?useSSL=false</database.url>
-        <target.address>http://localhost:8089</target.address>
+        <target.address>http://localhost:8080</target.address>
         <skip.unit.tests>true</skip.unit.tests>
         <skip.starting.app.before.tests>false</skip.starting.app.before.tests>
       </properties>
@@ -172,9 +172,9 @@
     <profile>
       <properties>
         <skip.integration.tests>false</skip.integration.tests>
-        <server.port>8089</server.port>
+        <server.port>8080</server.port>
         <database.url>jdbc:mysql://localhost:3306/agentdiscoveries?useSSL=false</database.url>
-        <target.address>http://localhost:8089</target.address>
+        <target.address>http://localhost:8080</target.address>
         <skip.unit.tests>false</skip.unit.tests>
         <skip.starting.app.before.tests>false</skip.starting.app.before.tests>
       </properties>

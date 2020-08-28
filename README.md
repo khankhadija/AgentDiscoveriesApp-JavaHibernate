@@ -68,28 +68,18 @@ Alternatively, you can serve the frontend using a development server:
 
 To speed up front end development, there is a dev server you can run instead.
 
+**NB: You will still need to have the backend server running on port 8080!**
+
 To use this from the command line, run `mvn clean package -Ddev`
-To use this, setup a `Maven` configuration with the working directory set to the `AgentDiscoveries-Frontend` project.
-For the Command Line option, add `clean package -Ddev`.
+
+To use this from IntelliJ, set up a `Maven` build configuration with the working directory set to the `AgentDiscoveries-Frontend` project and the command Line option to `clean package -Ddev`.
 
 This will set up a server at `http://localhost:8081` (*Note the difference!*).
 The browser will automatically reload whenever you change any javascript or SASS.
 
-Note: You will still need to have the backend server running on port 8080!
+# Tests
 
-# Unit Tests
-
-Both the backend and frontend Unit Tests can be run with `mvn test`
-
-## Backend Tests
-
-These can be found in `AgentDiscoveries-Backend/src/test/java`.
-
-**N.B. Unit test files must have names ending with "Test.java"**
-
-To run in IntelliJ, right click on any test to run it individually, or the entire directory to 'Run All Tests'.
-
-From the command line, use `mvn test` in the `AgentDiscoveries-Backend` directory. 
+Both the backend and frontend tests can be run with `mvn test` in the root directory.
 
 ## Frontend Tests
 
@@ -99,23 +89,27 @@ To run the frontend unit tests in IntelliJ, follow the instructions for [Mocha](
 
 From command line navigate to `AgentDiscoveries-Frontend` and then run `npm test` (or `mvn test`, but this may give less pretty output).
 
-# Integration Tests
+## Backend Tests
 
-These can be found in `AgentDiscoveries-Backend/src/test/java/integration`.
+These can be found in `AgentDiscoveries-Backend/src/test/java`
+
+### Unit Tests
+
+These can be found in `AgentDiscoveries-Backend/src/test/java/org/softwire/training/api/unit`
+
+**N.B. Unit test files must have names ending with "Test.java"**
+
+To run in IntelliJ, right click on any test to run it individually, or the entire directory to 'Run tests in org.softwire.training.api.unit'.
+
+### Integration Tests
+
+These can be found in `AgentDiscoveries-Backend/src/test/java/org/softwire/training/api/integration`
 
 **N.B. Integration test files must have names ending with "IT.java"**
 
-## Command Line
+To run in IntelliJ:
 
-To run the tests use `mvn verify -P integration-test-local` from the root directory.
-This will target the address `http://localhost:8080` by default.
+* *Make sure the app is already running*
+* Right click on any test to run it individually, or the entire directory to 'Run tests in org.softwire.training.api.integration'.
 
-If you need to run the tests on another address (e.g. for targeting the live site)
-use the command `mvn verify -P integration-test-live -Dtarget.address="http://foo.bar"` with the relevant address.
-
-## IntelliJ
-
-Make sure the app is already running, then you can run/debug each test individually.
-
-Changing `WebDriverHelper.HEADLESS` to `false` will cause a visible Chrome window to pop up,
-which is usually much easier to debug!
+Changing `WebDriverHelper.HEADLESS` to `false` will cause a visible Chrome window to pop up, which is sometimes much easier to debug!
