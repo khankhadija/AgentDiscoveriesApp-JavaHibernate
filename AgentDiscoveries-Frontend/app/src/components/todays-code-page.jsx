@@ -20,9 +20,10 @@ export default class TodaysCodePage extends React.Component {
     render() {
         return (
             <div className='col-md-8 col-md-offset-2'>
+
                 <Form>
 
-                    <h3>Encode/decode message with today's secret</h3>
+                        <h3>Encode/decode message with today's secret</h3>
 
                     <FormGroup>
                         <ControlLabel>Message</ControlLabel>
